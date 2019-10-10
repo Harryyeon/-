@@ -19,7 +19,7 @@ if a != 0 and vf!=0 :
     print('가속도와 최종속력 둘중 하나는 0이어야 합니다.')
     
     
-if a == 0 :
+if a == 0 : # 가속도를 구해내는 물리식에 대입
     a = (vf - vi) / t
     d = (vf**2 - vi**2) / (2*a)
     print("가속도는", a, "m/s^2 입니다.")
@@ -31,7 +31,7 @@ if a == 0 :
     plt.title('등가속도 운동 그래프') 
     plt.show()
     
-    x = np.arange(0, t, 0.01)
+    x = np.arange(0, t, 0.01) # x축 상과 y축 상의 이차원으로 분해하여 생각
     y = vi*x + 0.5*a*x**2
     plt.plot(x,y)
     plt.xlabel('time(s)')
